@@ -1,17 +1,14 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 import "./globals.css";
+import 'react-toastify/dist/ReactToastify.css';
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
+import SSEContextProvider from "@/context/SSEContext";
+import {ToastContainer} from "react-toastify"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,8 +22,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body>
+      <AppRouterCacheProvider>
+        <SSEContextProvider>
+          <ToastContainer autoClose={200} />
         {children}
+        </SSEContextProvider>
+      </AppRouterCacheProvider>
+      
       </body>
     </html>
   );

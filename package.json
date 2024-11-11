@@ -9,16 +9,29 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/cache": "^11.13.1",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@fontsource/roboto": "^5.1.0",
+    "@mui/icons-material": "^6.1.6",
+    "@mui/lab": "^6.0.0-beta.14",
+    "@mui/material": "^6.1.6",
+    "@mui/material-nextjs": "^6.1.6",
+    "axios": "^1.7.7",
+    "lodash": "^4.17.21",
+    "next": "14.2.16",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.16"
+    "react-flip-move": "^3.0.5",
+    "react-toastify": "^10.0.6"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@types/lodash": "^4.17.13",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.2.16"
+    "eslint-config-next": "14.2.16",
+    "typescript": "^5"
   }
 }
