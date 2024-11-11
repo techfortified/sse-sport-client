@@ -6,6 +6,7 @@ import PlayerCard from "./PlayerCard";
 import FlipMove from "react-flip-move";
 import { useSSEContext } from "@/context/SSEContext";
 
+
 const calTotalVotes = (players: AppPlayer[]) => {
   return players.reduce((prev, curr) => {
     return prev + curr.points;
